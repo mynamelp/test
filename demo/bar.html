@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Bar Chart</title>
+<script type="text/javascript" src="../js/FL_Charts.js"></script>
+<script type="text/javascript">
+var _chart;
+
+var  n_bar_data = [
+					[280,200,300,"Jun"],
+					[100,140,100,"July"],
+					[220,200,200,"Aug"],
+					[300,210,400,"Sep"]
+					];
+
+window.onload = function (){
+
+_chart = new FlChart(
+			{
+                "id":"chartContainer",
+                "bin":"../bin/",
+				"width":800, 
+				"height":600, 
+                "type":"bar",
+                "lable":true,
+                "margin":[10,25,60,40],
+				"color":["0xe7bb16","0xfab82f","0xf56d21","0xdb210c"],
+                "fontSize":12,
+                "onInit":function(v){
+                v.setBarLegend(["a","b","c"]);
+				v.setData( n_bar_data );
+			}
+            }
+	);			
+};
+</script>
+</head>
+<body>
+<div id="chartContainer"></div>
+</body>
+</html>

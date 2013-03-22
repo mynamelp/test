@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>StackedArea</title>
+<script type="text/javascript" src="../js/FL_Charts.js"></script>
+<script type="text/javascript">
+var _chart;
+
+var stack_data = [
+                  [100,300,"Jan"],
+                  [200,200,"Feb"],
+                  [250,100,"Mar"],
+                  [300,90,"Apr"],
+                  [200,100,"May"],
+                  [150,140,"Jun"],
+                  [200,200,"Jul"],
+                  [300,270,"Aug"],
+                  [400,350,"Sep"],
+                  [500,400,"Oct"]
+                ];
+	
+window.onload = function (){
+    _chart = new FlChart(
+            {
+                "id":"chartContainer",
+                "bin":"../bin/",
+				"width":800, 
+				"height":600, 
+                "type":"Stack",
+                "margin":[10,25,40,40],
+                "lable":true,
+                "fontSize":12,
+                "onInit":function(v){
+				v.setData( stack_data );
+			}
+            }
+           );	
+};
+</script>
+</head>
+<body>
+<div id="chartContainer"></div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Pie Chart</title>
+<script type="text/javascript" src="../js/FL_Charts.js"></script>
+<script type="text/javascript">
+var _chart;
+
+var arr =  [
+			[1500,"Tom"],
+			[1700,"Bob"],
+			[1200,"Cay"],
+			[1700,"Bob"],
+			[1200,"Cay"],
+			[1500,"Eny"]
+		];
+window.onload = function (){                      
+    _chart = new FlChart(
+                     {
+                        "id":"chartContainer",
+		                "bin":"../bin/",
+						"width":400, 
+						"height":400, 
+		                "type":"pie",
+		                "fontSize":12,
+		                "onInit":function(v){
+						 v.setData( arr );
+						}
+                     }
+                    );
+};
+</script>
+</head>
+<body>
+<div id="chartContainer"></div>
+</body>
+</html>

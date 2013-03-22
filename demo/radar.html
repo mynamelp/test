@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Radar Chart</title>
+<script type="text/javascript" src="../js/FL_Charts.js"></script>
+<script type="text/javascript">
+var _chart;
+
+var arr = [
+		   [9,4,8,5,4,9,4,8,5,4,1,2],
+		   [7,12,3,4,8,7,12,3,4,8,3,1]
+	   ];
+ 
+window.onload = function (){
+    _chart = new FlChart(
+                     {
+                         "id":"chartContainer",
+                         "bin":"../bin/",
+						 "width":400, 
+						 "height":400, 
+                         "type":"Radar",
+                         "radius":180,
+                         "fontSize":12,
+                         "axis":1,
+                		 "grid":true,
+                		 "marker":false,
+                		 "color":["0xdb210c","0xf56d21","0xfab82f","0xfee535"],
+                         "onInit":function(v){
+                          v.setAxesLables( ["AxisA","AxisB","AxisC","AxisD","AxisE","AxisF","AxisG","AxisH","AxisI","AxisJ","AxisK","AxisL"] );
+						  v.setData( arr );
+                     	 }
+                     }
+                    );
+};
+</script>
+</head>
+<body>
+<div id="chartContainer"></div>
+</body>
+</html>

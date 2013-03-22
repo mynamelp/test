@@ -1,0 +1,8 @@
+1.关于flash的安全沙箱以及受信任位置设置:
+在Flash player中，右键 全局设置--》高级选项中有一项是受信任位置,添加受信位置，将你解压的charts文件夹的地址添加进去即可。
+
+
+2.同样我也将这份demo上传到线上服务器，可以通过url直接访问查看得到，例如：
+http://www.shengliqiao.com/newCharts/demo/bar.html
+http://www.shengliqiao.com/newCharts/demo/line.html
+......

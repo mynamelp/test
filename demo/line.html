@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Line Chart</title>
+<script type="text/javascript" src="../js/FL_Charts.js"></script>
+<script type="text/javascript"> 
+var _chart;
+	
+var line_data = [
+				[100,200,"Jan"],
+				[200,100,"Feb"],
+				[250,300,"Mar"],
+				[300,500,"Apr"],
+				[200,100,"May"],
+				[150,400,"Jun"],
+				[200,500,"Jul"],
+				[300,100,"Aug"],
+				[400,250,"Sep"],
+				[600,200,"Oct"],
+				[500,600,"Nov"],
+				[800,300,"Dec"]
+             ];
+	
+window.onload = function (){
+    _chart = new FlChart(
+                     {
+                         "id":"chartContainer",
+                         "bin":"../bin/",
+						 "width":800, 
+						 "height":400, 
+                         "type":"Line",
+                         "margin":[50,50,50,50],
+                         "lable":true,
+                         "fontSize":14,
+                         "onInit":function(v){
+						 v.setData( line_data );
+						}
+                     }
+                    );
+};
+</script>
+</head>
+<body>
+<div id="chartContainer"></div>
+</body>
+</html>
